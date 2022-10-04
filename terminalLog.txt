@@ -1,27 +1,15 @@
 
-HP@MrKHan MINGW64 /f/Learning/Web Development/Practice/ExpressByMansoorSB/JSBackend (master)
+
+ 
 $ git init
-Reinitialized existing Git repository in F:/Learning/Web Development/Practice/ExpressByMansoorSB/JSBackend/.git/
+Reinitialized existing Git repository in F:/ ....../JSBackend/.git/
 
-HP@MrKHan MINGW64 /f/Learning/Web Development/Practice/ExpressByMansoorSB/JSBackend (master)
-$ git commit -am "make it better"
-On branch master
-Your branch and 'origin/master' have diverged,
-and have 2 and 1 different commits each, respectively.
-  (use "git pull" to merge the remote branch into yours)
-
-nothing to commit, working tree clean
-
-HP@MrKHan MINGW64 /f/Learning/Web Development/Practice/ExpressByMansoorSB/JSBackend (master)
-$ git init
-Reinitialized existing Git repository in F:/Learning/Web Development/Practice/ExpressByMansoorSB/JSBackend/.git/
-
-HP@MrKHan MINGW64 /f/Learning/Web Development/Practice/ExpressByMansoorSB/JSBackend (master)
+.....   /JSBackend (master)
 $ git commit -am "make it better"
 [master 84da4d6] make it better
  1 file changed, 1 insertion(+), 2 deletions(-)
 
-HP@MrKHan MINGW64 /f/Learning/Web Development/Practice/ExpressByMansoorSB/JSBackend (master)
+ 
 $ git push heroku master
 Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
