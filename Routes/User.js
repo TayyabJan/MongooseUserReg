@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const bcrypt = require("bcrypt");
+const bcryptjs = require("bcryptjs");
 const jwt = require("jsonwebtoken")
 const router = require("express").Router();
 
@@ -21,7 +21,7 @@ router.get("/register", verifytoken, (req, res) => {
 })
 
 
-router.post("/register", async (req, res) => {
+router.post("/register", verifytoken, async (req, res) => {
 
   const { error } = await regValidation(req.body);
   if (error) return res.send(error.details[0].message);
@@ -32,8 +32,8 @@ router.post("/register", async (req, res) => {
   const { name, email, password, address } = req.body;
 
   // res.send("Data is Correct");
-  const salt = await bcrypt.genSalt(10);
-  const hash = await bcrypt.hash(req.body.password, salt);
+  const salt = await bcryptjs.genSalt(10);
+  const hash = await bcryptjs.hash(req.body.password, salt);
   const user = new User({
     name,
     email,
@@ -58,13 +58,13 @@ router.post("/register", async (req, res) => {
 
 router.post("/login", async (req, res) => {
   //res.send("Please wait we are connecting you soon");
-  const user = await User.findOne({ email: req.body.email }) //,password: await bcrypt.hash(req.body.password, await bcrypt.genSalt(10))})
+  const user = await User.findOne({ email: req.body.email }) //,password: await bcryptjs.hash(req.body.password, await bcrypt.genSalt(10))})
   if (!user) return res.status(400).send("Invalid Email or Passowrd");
-  const validPass = await bcrypt.compare(req.body.password, user.password)
+  const validPass = await bcryptjs.compare(req.body.password, user.password)
   if (!validPass) return res.status(400).send("Invalid Email or Password");
   const token = jwt.sign({ _id: user.id }, process.env.TOKEN_SECRET);
+  console.log(token)
   res.header("auth-token", token).send(token)
-  res.send("Welcome to Users Portal");
 })
 
 
