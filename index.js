@@ -1,6 +1,7 @@
 const expres = require('express')
 require ("dotenv/config")
 const userRoutes = require("./Routes/User")
+const productRoutes= require("./Routes/products")
 const mongoose = require("mongoose")
 const cors = require("cors");
 const PORT = process.env.PORT || 3001
@@ -12,9 +13,14 @@ mongoose.connect(`mongodb+srv://tayyabjan:${process.env.Password}@cluster0.batsh
     console.log("Connected");
 })
 app.use(expres.json())
-app.use(cors());
+
+const CorsOptions= {
+    exposedHeaders: ['token'],
+    origin: 'http://localhost:3000'
+}
+app.use(cors(CorsOptions));
 
 app.use("/api/user/",userRoutes)
-
+app.use("/api/products/",productRoutes)
 
 app.listen(PORT, ()=> {   console.log(` THe server is started at  ${PORT}`)})
