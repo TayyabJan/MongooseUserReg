@@ -15,8 +15,7 @@ mongoose.connect(`mongodb+srv://tayyabjan:${process.env.Password}@cluster0.batsh
 app.use(expres.json())
 
 const CorsOptions= {
-    exposedHeaders: ['token'],
-    origin: 'http://localhost:3000'
+    exposedHeaders: ['token']
 }
 app.use(cors(CorsOptions));
 
