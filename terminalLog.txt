@@ -1,0 +1,104 @@
+
+HP@MrKHan MINGW64 /f/Learning/Web Development/Practice/ExpressByMansoorSB/JSBackend (master)
+$ git init
+Reinitialized existing Git repository in F:/Learning/Web Development/Practice/ExpressByMansoorSB/JSBackend/.git/
+
+HP@MrKHan MINGW64 /f/Learning/Web Development/Practice/ExpressByMansoorSB/JSBackend (master)
+$ git commit -am "make it better"
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 2 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+
+HP@MrKHan MINGW64 /f/Learning/Web Development/Practice/ExpressByMansoorSB/JSBackend (master)
+$ git init
+Reinitialized existing Git repository in F:/Learning/Web Development/Practice/ExpressByMansoorSB/JSBackend/.git/
+
+HP@MrKHan MINGW64 /f/Learning/Web Development/Practice/ExpressByMansoorSB/JSBackend (master)
+$ git commit -am "make it better"
+[master 84da4d6] make it better
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+HP@MrKHan MINGW64 /f/Learning/Web Development/Practice/ExpressByMansoorSB/JSBackend (master)
+$ git push heroku master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 287 bytes | 287.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Building on the Heroku-22 stack
+remote: -----> Using buildpack: heroku/nodejs
+remote: -----> Node.js app detected
+remote:        
+remote: -----> Creating runtime environment
+remote:
+remote:        NPM_CONFIG_LOGLEVEL=error
+remote:        NODE_VERBOSE=false
+remote:        NODE_ENV=production
+remote:        NODE_MODULES_CACHE=true
+remote:
+remote: -----> Installing binaries
+remote:        engines.node (package.json):  unspecified
+remote:        engines.npm (package.json):   unspecified (use default)
+remote:
+remote:        Resolving node version 16.x...
+remote:        Downloading and installing node 16.17.1...
+remote:        Using default npm version: 8.15.0
+remote:        
+remote: -----> Restoring cache
+remote:        - npm cache
+remote:        
+remote: -----> Installing dependencies
+remote:        Prebuild detected (node_modules already exists)
+remote:        Rebuilding any native modules
+remote:        rebuilt dependencies successfully
+remote:        Installing any new modules (package.json)
+remote:        
+remote:        up to date, audited 112 packages in 591ms
+remote:
+remote:        11 packages are looking for funding
+remote:          run `npm fund` for details
+remote:
+remote:        found 0 vulnerabilities
+remote:
+remote: -----> Build
+remote:
+remote: -----> Caching build
+remote:        - npm cache
+remote:        
+remote: -----> Pruning devDependencies
+remote:        
+remote:        up to date, audited 112 packages in 463ms
+remote:
+remote:        11 packages are looking for funding
+remote:          run `npm fund` for details
+remote:
+remote:        found 0 vulnerabilities
+remote:
+remote: -----> Build succeeded!
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 35.6M
+remote: -----> Launching...
+remote:        Released v7
+remote:        https://jsbackendapi.herokuapp.com/ deployed to Heroku
+remote:
+remote: Starting November 28th, 2022, free Heroku Dynos, free Heroku Postgres, and free Heroku Data for Redis® will no longer be available.
+remote:
+remote: If you have apps using any of these resources, you must upgrade to paid plans by this date to ensure 
+your apps continue to run and to retain your data. For students, we will announce a new program by the end of September. Learn more at https://blog.heroku.com/next-chapter
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/jsbackendapi.git
+   8eb5180..84da4d6  master -> master
+
+HP@MrKHan MINGW64 /f/Learning/Web Development/Practice/ExpressByMansoorSB/JSBackend (master)
+$
